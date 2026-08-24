@@ -1,12 +1,15 @@
 {
   "name": "dsh-usage-openrouter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DSH command plugin: /usage-openrouter command and composer readout for your OpenRouter account usage",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "license": "MIT",
   "author": "penny",
+  "scripts": {
+    "test": "node test/client-icon.mjs"
+  },
   "keywords": [
     "dsh",
     "deepseek-harness",
