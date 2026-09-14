@@ -1,5 +1,16 @@
 # Release Notes
 
+## v1.1.0
+
+**新增：内容超宽时悬停跑马灯滚动，窗口缩放即时生效**
+
+- 读条文本装入「裁剪窗 + 自然宽度轨道」结构：内容超出读条宽度时，鼠标悬停即向左滚动跑马灯，尾部不再被静默截断；完整文本仍以悬停提示（title）兜底
+- 滚动范围精确等于溢出量（+8px 余量），图标区域永不遮挡
+- 溢出量改用 ResizeObserver 监听裁剪窗：浏览器窗口放大/缩小时跑马灯立即重新武装，不再等 5 秒轮询
+- 与家族已有跑马灯的 glm-cn / opencode-go 行为对齐
+
+**English**: hover-to-scroll marquee on overflow (clip window + max-content track, icon never covered, full text still in the tooltip); overflow is re-measured via ResizeObserver on the clip box, so resizing the browser window re-arms the marquee immediately instead of waiting for the 5s poll. Aligned with the glm-cn / opencode-go behavior.
+
 ## v1.0.2
 
 **兼容 dsh 0.1.2-alpha.2**
